@@ -1,0 +1,52 @@
+{
+  "schema": "gooo/release-history-provenance/v1",
+  "repository": "kimjooyoon/gooo-improvement-selector",
+  "receipt_state": "REFUTED_RELEASE_IMMUTABILITY",
+  "discovered_source": "gooo-self-improvement-ledger API audit",
+  "audit": {
+    "repository_immutable_releases": {
+      "endpoint": "/repos/kimjooyoon/gooo-improvement-selector/immutable-releases",
+      "enabled_before": false,
+      "enabled_after": true,
+      "enforced_by_owner": false
+    },
+    "release": {
+      "tag": "v0.1.0",
+      "tag_object": "174b9f975b18953359ca7a0a253662a79f907c4e",
+      "tag_target": "a2ad62caf907e87703abe0c6e8debb0d3602c8d3",
+      "immutable": false,
+      "rest_endpoint": "/repos/kimjooyoon/gooo-improvement-selector/releases/tags/v0.1.0",
+      "graphql_field": "Release.immutable",
+      "assets": [
+        {
+          "name": "gooo-improvement-selector-v0.1.0-evidence.tar.gz",
+          "size": 89681,
+          "api_sha256_digest": "sha256:972f35d2893aaff6b07369768bbd79f1edaebd7e3c525c194ee6745580659c9d"
+        },
+        {
+          "name": "release-lock-v0.1.0.json",
+          "size": 644,
+          "api_sha256_digest": "sha256:d507c0bd4652a3b6496ee5cdd89c44795aeeb292c4b5f5065772b3cac0dec671"
+        },
+        {
+          "name": "SHA256SUMS",
+          "size": 206,
+          "api_sha256_digest": "sha256:4064705a2609e1f7f296ea957a27b6f17c79ab75ffab11591dd81be73cdc358c"
+        }
+      ],
+      "success_eligible": false,
+      "preserve_without_delete_or_recreate": true
+    }
+  },
+  "next_release_policy": {
+    "name": "IMMUTABLE_RELEASES_BEFORE_TAG",
+    "setting_required": true,
+    "setting_endpoint": "/repos/kimjooyoon/gooo-improvement-selector/immutable-releases",
+    "require_rest_release_immutable": true,
+    "require_graphql_release_immutable": true,
+    "require_tag_target_equals_merged_main": true,
+    "require_main_ci_success": true,
+    "require_asset_api_sha256_digest": true,
+    "prior_release_action": "PRESERVE_V0.1.0_REFUTED_RELEASE_WITHOUT_DELETE_OR_RECREATE"
+  }
+}

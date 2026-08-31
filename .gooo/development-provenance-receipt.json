@@ -36,6 +36,14 @@
     "go_vet": 0
   },
   "integrated_duplicate_scenarios": [],
+  "release_history_receipt": ".gooo/release-history-provenance-receipt.json",
+  "release_immutability_audit": {
+    "release": "v0.1.0",
+    "state": "REFUTED_RELEASE_IMMUTABILITY",
+    "immutable": false,
+    "source": "gooo-self-improvement-ledger API audit",
+    "next_release_policy": "ENABLE_REPOSITORY_IMMUTABLE_RELEASES_BEFORE_TAGGING_NEXT_RELEASE_AND_REQUIRE_REST_AND_GRAPHQL_IMMUTABLE_TRUE"
+  },
   "removed_duplicate_definitions": [
     ".github/workflows/ci.yml",
     "contracts/selection-v1.json",
