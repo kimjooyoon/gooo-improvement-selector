@@ -1,0 +1,10 @@
+{
+  "schema": "gooo/ownership-receipt/v1",
+  "owner_thread_id": "01a05589-fe64-7940-937a-51f152bc4bac",
+  "transfer_from": "01a0558a-d49c-7c32-9bcd-a79346ed1408",
+  "reason": "CONCURRENT_BOOTSTRAP_RECOVERY",
+  "scope": "gooo-improvement-selector",
+  "shared_workspace_policy": "single-writer",
+  "repository_writes": 0,
+  "input_repository_policy": "read-only"
+}

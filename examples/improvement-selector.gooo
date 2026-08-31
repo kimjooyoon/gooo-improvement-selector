@@ -1,0 +1,20 @@
+# Gooo source authority for the improvement selection loop.
+program gooo-improvement-selector v1
+
+activity authority_guardrail FOUNDATION DRIVER
+activity semantic_conformance FOUNDATION OUTCOME
+activity candidate_generation FOUNDATION GUARDRAIL
+activity source_ir_binding FOUNDATION DRIVER
+activity counterexample_preservation COHERENCE OUTCOME
+activity measurement_receipt COHERENCE GUARDRAIL
+activity exact_pair_key COHERENCE DRIVER
+activity candidate_comparison COHERENCE OUTCOME
+activity lexicographic_selector REGRESSION GUARDRAIL
+activity resolution_precedence REGRESSION DRIVER
+activity unknown_coordinates REGRESSION OUTCOME
+activity human_report REGRESSION GUARDRAIL
+
+candidate alpha semantic_alpha
+candidate beta semantic_beta
+candidate gamma semantic_gamma
+candidate delta semantic_delta

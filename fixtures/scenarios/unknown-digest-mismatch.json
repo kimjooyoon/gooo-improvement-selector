@@ -1,0 +1,13 @@
+{
+  "schema": "gooo/improvement-selector/scenario/v1",
+  "scenario_id": "unknown-digest-mismatch",
+  "class": "unknown",
+  "toolchain": "go1.27",
+  "promotion_allowed": true,
+  "observations": [
+    {"candidate_id":"alpha","authority_allowed":true,"semantic_conformance":true,"counterexample_preserved":true,"pair":{"key":{"scenario_id":"unknown-digest-mismatch","toolchain":"go1.27","input_digest":"sha256:wrong-input","contract_digest":"CURRENT"},"before":{"memory_kib":100,"build_wall_ms":50,"test_wall_ms":40,"conformance_wall_ms":30},"after":{"memory_kib":90,"build_wall_ms":45,"test_wall_ms":36,"conformance_wall_ms":27}}},
+    {"candidate_id":"beta","authority_allowed":true,"semantic_conformance":true,"counterexample_preserved":true},
+    {"candidate_id":"gamma","authority_allowed":true,"semantic_conformance":true,"counterexample_preserved":true},
+    {"candidate_id":"delta","authority_allowed":true,"semantic_conformance":true,"counterexample_preserved":true}
+  ]
+}

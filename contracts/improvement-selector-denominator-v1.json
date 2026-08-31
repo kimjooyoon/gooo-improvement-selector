@@ -1,0 +1,32 @@
+{
+  "schema": "gooo/improvement-selector/denominator/v1",
+  "denominator_id": "gooo.denominator.improvement-selector.v1",
+  "total": 12,
+  "proof_choices": ["FOUNDATION", "COHERENCE", "REGRESSION"],
+  "indicator_classes": ["DRIVER", "OUTCOME", "GUARDRAIL"],
+  "selector_order": [
+    "AUTHORITY_GUARDRAIL",
+    "SEMANTIC_CONFORMANCE",
+    "COUNTEREXAMPLE_PRESERVATION",
+    "EXACT_PAIRED_RESOURCE_DELTAS"
+  ],
+  "precedence": ["REFUTED", "UNKNOWN", "CLOSED"],
+  "unknown_fields": ["stage", "step", "reason", "unknown_class", "next_operation", "blocked_by"],
+  "no_scores": true,
+  "no_percentages": true,
+  "no_natural_language_inference": true,
+  "cells": [
+    {"ordinal": 1, "id": "AUTHORITY_GUARDRAIL", "activity": "authority_guardrail", "proof_choice": "FOUNDATION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.selector.authority.v1", "metric_path": "candidate.authority_allowed", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 2, "id": "SEMANTIC_CONFORMANCE", "activity": "semantic_conformance", "proof_choice": "FOUNDATION", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.selector.semantic.v1", "metric_path": "candidate.semantic_conformance", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 3, "id": "CANDIDATE_GENERATION", "activity": "candidate_generation", "proof_choice": "FOUNDATION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.selector.generated.v1", "metric_path": "candidate.artifact_digest", "artifact": "candidates.json", "evaluator": "selector.GenerateCandidates"},
+    {"ordinal": 4, "id": "SOURCE_IR_BINDING", "activity": "source_ir_binding", "proof_choice": "FOUNDATION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.selector.binding.v1", "metric_path": "semantic_ir.source_digest", "artifact": "ir.json", "evaluator": "selector.Compile"},
+    {"ordinal": 5, "id": "COUNTEREXAMPLE_PRESERVATION", "activity": "counterexample_preservation", "proof_choice": "COHERENCE", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.selector.counterexample.v1", "metric_path": "candidate.counterexample_preserved", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 6, "id": "MEASUREMENT_RECEIPT", "activity": "measurement_receipt", "proof_choice": "COHERENCE", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.selector.receipt.v1", "metric_path": "receipt.entries", "artifact": "receipt.json", "evaluator": "selector.MeasureScenario"},
+    {"ordinal": 7, "id": "EXACT_PAIR_KEY", "activity": "exact_pair_key", "proof_choice": "COHERENCE", "indicator_class": "DRIVER", "metric_id": "gooo.metric.selector.pair-key.v1", "metric_path": "receipt.entries[].pair.key", "artifact": "receipt.json", "evaluator": "selector.MeasureScenario"},
+    {"ordinal": 8, "id": "CANDIDATE_COMPARISON", "activity": "candidate_comparison", "proof_choice": "COHERENCE", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.selector.comparison.v1", "metric_path": "selection.candidates[].delta", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 9, "id": "LEXICOGRAPHIC_SELECTOR", "activity": "lexicographic_selector", "proof_choice": "REGRESSION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.selector.lexicographic.v1", "metric_path": "selection.selector_order", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 10, "id": "RESOLUTION_PRECEDENCE", "activity": "resolution_precedence", "proof_choice": "REGRESSION", "indicator_class": "DRIVER", "metric_id": "gooo.metric.selector.precedence.v1", "metric_path": "selection.precedence", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 11, "id": "UNKNOWN_COORDINATES", "activity": "unknown_coordinates", "proof_choice": "REGRESSION", "indicator_class": "OUTCOME", "metric_id": "gooo.metric.selector.unknown.v1", "metric_path": "selection.unknown", "artifact": "selection.json", "evaluator": "selector.SelectImprovement"},
+    {"ordinal": 12, "id": "HUMAN_REPORT", "activity": "human_report", "proof_choice": "REGRESSION", "indicator_class": "GUARDRAIL", "metric_id": "gooo.metric.selector.report.v1", "metric_path": "human-report.md", "artifact": "human-report.md", "evaluator": "selector.RenderMarkdown"}
+  ]
+}
