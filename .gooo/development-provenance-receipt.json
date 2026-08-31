@@ -1,0 +1,50 @@
+{
+  "schema": "gooo/development-provenance/v1",
+  "canonical_owner_thread_id": "01a05589-fe64-7940-937a-51f152bc4bac",
+  "transfer_from": "01a0558a-d49c-7c32-9bcd-a79346ed1408",
+  "transfer_reason": "CONCURRENT_BOOTSTRAP_RECOVERY",
+  "recovery_events": [
+    {
+      "event": "README_MISSING_DURING_TRANSFER",
+      "action": "RESTORED_CANONICAL_SELECTOR_README",
+      "canonical_paths": [
+        "selector/",
+        "cmd/gooo-selector/",
+        "contracts/improvement-selector-denominator-v1.json",
+        "examples/improvement-selector.gooo",
+        "fixtures/scenarios/"
+      ]
+    }
+  ],
+  "scope": "gooo-improvement-selector",
+  "shared_workspace_policy": "single-writer",
+  "duplicate_writer_thread_id": "01a05589-fe64-7940-937a-51f152bc4bac",
+  "duplicate_writer_action": "stopped_before_canonical_integration",
+  "duplicate_writer_local_commands": {
+    "gofmt": 3,
+    "go_version": 1,
+    "go_test": 0,
+    "go_build": 0,
+    "go_vet": 0
+  },
+  "canonical_local_go_commands_after_conflict": 0,
+  "local_go_executions_recorded": {
+    "gofmt": 3,
+    "go_version": 1,
+    "go_test": 0,
+    "go_build": 0,
+    "go_vet": 0
+  },
+  "integrated_duplicate_scenarios": [],
+  "removed_duplicate_definitions": [
+    ".github/workflows/ci.yml",
+    "contracts/selection-v1.json",
+    "scripts/run-fixtures.sh",
+    "internal/selector",
+    "cmd/gooo-improvement-selector",
+    "examples/self-improvement-selector",
+    "scenarios"
+  ],
+  "repository_writes": 0,
+  "input_repository_writes": 0
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "gooo/improvement-selector/scenario/v1",
+  "scenario_id": "refuted-authority",
+  "class": "refuted",
+  "toolchain": "go1.27",
+  "promotion_allowed": true,
+  "observations": [
+    {"candidate_id":"alpha","authority_allowed":false,"semantic_conformance":true,"counterexample_preserved":true},
+    {"candidate_id":"beta","authority_allowed":false,"semantic_conformance":true,"counterexample_preserved":true},
+    {"candidate_id":"gamma","authority_allowed":false,"semantic_conformance":true,"counterexample_preserved":true},
+    {"candidate_id":"delta","authority_allowed":false,"semantic_conformance":true,"counterexample_preserved":true}
+  ]
+}

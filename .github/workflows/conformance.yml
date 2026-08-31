@@ -1,0 +1,31 @@
+name: conformance
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Go 1.27
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.x'
+          check-latest: true
+      - name: Run conformance
+        run: ./scripts/ci-conformance.sh
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gooo-improvement-selector-evidence
+          path: ${{ runner.temp }}/gooo-improvement-selector.*/evidence
+          if-no-files-found: error
+          retention-days: 14
